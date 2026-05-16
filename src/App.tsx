@@ -271,7 +271,7 @@ export default function App() {
                <Bell className="w-5 h-5" />
             </button>
             <button 
-              onClick={() => setIsWalletConnected(!isWalletConnected)}
+              onClick={() => window.open('https://metamask.io/', '_blank')}
               className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-black text-sm tracking-tight transition-all border ${
                 isWalletConnected 
                   ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-500' 
@@ -815,10 +815,23 @@ export default function App() {
                           NOTE: YOU MUST DEPOSIT THE REQUIRED AMOUNT TO THIS ADDRESS ON THE <span className="font-black text-white px-0.5">ERC 20 NETWORK</span>
                         </p>
                       </div>
-                      <div className="w-full bg-slate-950 border border-white/10 rounded-2xl p-4 flex flex-col items-center justify-center">
-                        <code className="text-[11px] font-mono text-white break-all font-bold">
-                          0xbf33cc5af6f07a9c6a8a8108753b73ecac19ae48
+                      <div className="w-full bg-slate-950 border border-white/10 rounded-2xl p-5 flex items-center justify-between relative group shadow-2xl">
+                        <code className="text-[11px] font-mono text-white break-all max-w-[80%] font-bold tracking-tight">
+                          {ERC20_PAYMENT_ADDRESS}
                         </code>
+                        <button 
+                          onClick={copyAddress}
+                          className={`p-3.5 rounded-xl transition-all hover:scale-110 active:scale-95 shadow-xl ${
+                            isCopied ? 'bg-green-500 text-slate-950' : 'bg-emerald-500 text-slate-950 shadow-emerald-500/20'
+                          }`}
+                        >
+                          {isCopied ? <CheckCircle2 className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                        </button>
+                        {isCopied && (
+                          <div className="absolute -top-10 right-0 bg-green-500 text-slate-950 text-[10px] font-black px-3 py-1 rounded-lg uppercase tracking-widest animate-bounce">
+                            Copied to Protocol
+                          </div>
+                        )}
                       </div>
                     </div>
 
