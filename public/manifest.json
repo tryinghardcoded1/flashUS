@@ -1,0 +1,30 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "FLASH USDT SOLUTIONS",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "FlashCoin",
+  "start_url": "./",
+  "theme_color": "#ffffff",
+  "description": "2026 Leading Flash Coin Provider with 24/7 Live Chat & Phone Support Available Worldwide",
+  "id": "FLASHUsdt",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/JsqkWRU.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://i.imgur.com/0c5xzIo.jpeg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}
